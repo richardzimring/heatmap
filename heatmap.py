@@ -28,6 +28,8 @@ print(df)
 sns.heatmap(df,
             linewidths=2,
             cmap=color)
-plt.title(TICKER + " " + DIRECTION.capitalize()[:-1] + " Options " + METRIC.capitalize() + " Heat Map", fontsize=18)
+plt.title(TICKER + " " + DIRECTION.capitalize()[:-1] + " Options " + METRIC.replace('_',' ').title() + " Heat Map", fontsize=18)
+plt.xlabel("Expiration Date")
+plt.ylabel("Strike Price")
 plt.tight_layout()
 plt.show()
